@@ -16,4 +16,9 @@ const auth = (req, res, next) => {
   }
 };
 
-export { logger, auth };
+const logBody = (req, res, next) => {
+  console.log(req.body);
+  next();
+}
+
+export { logger, auth, logBody };
