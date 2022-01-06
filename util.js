@@ -9,4 +9,12 @@ function isObjectValid(obj) {
   return true;
 }
 
-export { isObjectValid };
+function getLastIndex(arr) {
+  return arr.length - 1;
+}
+
+function newId(products, lastIndex) {
+  return products[getLastIndex(products)].id + 1;
+}
+
+export { isObjectValid, newId };
